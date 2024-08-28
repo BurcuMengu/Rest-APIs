@@ -1,8 +1,8 @@
 import express from "express";
 import axios from "axios";
 import bodyParser from "body-parser";
-import dotenv from "dotenv";
-dotenv.config();
+import env from "dotenv";
+env.config();
 
 const app = express();
 const port = 3000;
@@ -10,7 +10,6 @@ const API_URL = "https://secrets-api.appbrewery.com";
 
 
 const yourBearerToken = process.env.YOUR_BEARER_TOKEN;
-console.log(`http://localhost:${yourBearerToken}`);
 
 const config = {
     headers: { Authorization: `Bearer ${yourBearerToken}` },
